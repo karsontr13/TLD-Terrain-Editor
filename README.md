@@ -7,7 +7,6 @@ A MelonLoader mod (Il2Cpp) with two in-game editors:
 * **Terrain brush**: raise, lower, flatten, fill and smooth the ground of any region.
 * **Object editor**: remove (hide), move, turn and copy objects of a region (stray rail cars, vehicles, rocks, trees ...).
 
-Changes are saved per region and played back every time the region loads. The game's own files are never changed.
 
 ## Install
 1. Install MelonLoader for The Long Dark.
