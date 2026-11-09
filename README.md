@@ -2,6 +2,8 @@
 
 A MelonLoader mod (Il2Cpp) with two in-game editors:
 
+## The changes you make are specific to the save file, and if you uninstall the mod, the changes will revert to their original state.
+
 * **Terrain brush**: raise, lower, flatten, fill and smooth the ground of any region.
 * **Object editor**: remove (hide), move, turn and copy objects of a region (stray rail cars, vehicles, rocks, trees ...).
 
@@ -97,8 +99,4 @@ back with `SetHeightsDelayLOD`; the level of detail and the collider are brought
 stroke (`SyncHeightmap`). On region load all saved dabs are applied to each terrain in one read and one write.
 
 Things standing on the ground (rails, rocks, props) do not follow the terrain.
-
-## Build
-`dotnet build -c Release` (set `TLD` to the game folder if it is not `D:\SteamLibrary\steamapps\common\TheLongDark`;
-`-p:CopyToMods=false` skips copying the DLL into `Mods`).
 
