@@ -2,7 +2,7 @@
 
 A MelonLoader mod (Il2Cpp) with two in-game editors:
 
-## The changes you make are specific to the save file, and if you uninstall the mod, the changes will revert to their original state.
+## ⚠️The changes you make are specific to the save file, and if you uninstall the mod, the changes will revert to their original state.⚠️
 
 * **Terrain brush**: raise, lower, flatten, fill and smooth the ground of any region.
 * **Object editor**: remove (hide), move, turn and copy objects of a region (stray rail cars, vehicles, rocks, trees ...).
