@@ -7,7 +7,6 @@ A MelonLoader mod (Il2Cpp) with two in-game editors:
 * **Terrain brush**: raise, lower, flatten, fill and smooth the ground of any region.
 * **Object editor**: remove (hide), move, turn and copy objects of a region (stray rail cars, vehicles, rocks, trees ...).
 
-
 ## Install
 1. Install MelonLoader for The Long Dark.
 2. Copy `TerrainEditor.dll` into the game's `Mods` folder.
@@ -84,6 +83,10 @@ Every save slot has its own edits, so a new game starts clean and one save's cha
 that region in that save. Strokes are lists of dabs (x, z, radius, amount, target height), so the files are small and
 can be shared. A new game only gets its save name once the game has made one; edits made before that are kept in
 memory and written under the name when the next edit is saved.
+
+**The edits are not stored inside the save file.** They are plain files in `UserData/TerrainEditor/<save name>/`,
+so copying, backing up, renaming or moving a save (including Steam Cloud) does not take them along. To move a world
+with its edits, copy that folder as well, named after the save. Removing the mod does not delete the files.
 
 When a save slot is deleted, or a new game starts under a name an earlier world used, that name's edits are removed
 so they never show in a different world.
