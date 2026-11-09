@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>TerrainEditor</AssemblyName>
+    <RootNamespace>LongDarkTerrain</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>$(NoWarn);CS0618;MSB3277</NoWarn>
+    <TLD Condition="'$(TLD)' == ''">D:\SteamLibrary\steamapps\common\TheLongDark</TLD>
+    <CopyToMods Condition="'$(CopyToMods)' == ''">true</CopyToMods>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(TLD)\MelonLoader\net6\MelonLoader.dll" Private="false" />
+    <Reference Include="$(TLD)\MelonLoader\net6\0Harmony.dll" Private="false" />
+    <Reference Include="$(TLD)\MelonLoader\net6\Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="$(TLD)\MelonLoader\net6\Il2CppInterop.Common.dll" Private="false" />
+    <Reference Include="$(TLD)\MelonLoader\Il2CppAssemblies\*.dll" Private="false" />
+    <Reference Include="$(TLD)\Mods\ModSettings.dll" Private="false" />
+  </ItemGroup>
+
+  <Target Name="CopyToGameMods" AfterTargets="Build" Condition="'$(CopyToMods)' == 'true'">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(TLD)\Mods" />
+  </Target>
+</Project>
